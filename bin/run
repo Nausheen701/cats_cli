@@ -1,8 +1,11 @@
 #!/usr/bin/env ruby
+#the shabang line above tells the program to use the updated version of ruby for the app file because it does not have a .rb  
 
+# entry point to my application, the file that the user will use to run the cli through the terminal (ruby bin/run)
 require_relative '../lib/environment.rb'
+#.. goes up to the root directory, then into env to load it
 
 # cli = CLI.new
 # cli.start
 
-CLI.new.start
+CLI.new.start #starts new instance of my cli class
