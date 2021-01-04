@@ -57,6 +57,8 @@ class CLI
     end
 
     def cat_details(cat)
+        puts " "
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts "Name: #{cat.name}"
         puts "Temperament: #{cat.temperament}"
         puts "Origin: #{cat.origin}"
@@ -80,13 +82,13 @@ class CLI
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts "Is this the kitti for you?"
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        puts "Input 'y' to adopt this cat, 'menu' to see other kitties, or 'exit' to leave Kittikoy:"
+        puts "Input 'yes' to adopt this cat, 'menu' to see other kitties, or 'exit' to leave Kittikoy:"
          adopt
      end
 
      def adopt
         finalize = user_input
-        if finalize == 'y'
+        if finalize == 'yes'
             puts " "
             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             puts "Congratulations on choosing a kitti! One of our kitti specialists will help you complete your adoption."
@@ -95,8 +97,6 @@ class CLI
             goodbye
         elsif finalize == 'menu' 
             cats_list
-            cat_selection
-            menu
         else 
             invalid
         end 
